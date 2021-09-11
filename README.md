@@ -20,7 +20,7 @@ ffmpeg
 ```
 
 
-Keep your token safe by keeping it in .env and add file name to .gitignore(this is to keep your token safe from prying eyes)
+Keep your token safe by keeping it in .env and add file name to .gitignore(this is to keep your token safe from prying eyes 👀)
 
 
 Now, It's time to code your bot. 
