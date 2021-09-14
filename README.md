@@ -24,3 +24,18 @@ Keep your token safe by keeping it in .env and add file name to .gitignore(this 
 
 
 Now, It's time to code your bot. 
+
+First you want to add a folder, in which you will add 6 more files:
+- command folder
+- play.js file
+- stop.js file
+- pause.js file
+- ping.js file
+- skip.js file
+- queue.js file
+
+The next file will be created in the main folder.
+
+- bot.js file (*this is where the main bot functions will be coded*.)
+
+The purpose of this is keep your code clean and easy to read; avoiding clutter in your code.
