@@ -4,11 +4,12 @@ import dotenv from 'dotenv'
 import { ping } from './Commands/ping.js'
 import { isValidCommand } from './Commands/validCommands.js'
 import { player } from './Commands/play.js'
+import { pause } from './Commands/pause.js'
 
 
 const bot = new Discord.Client()
 
-const prefix = '!'
+const prefix = '@'
 
 
 
@@ -22,7 +23,7 @@ bot.on('message', msg => {
     //Respond to correct prefix
     if(msg.content.startsWith(prefix)){
 
-        //Destructor command and request/task
+        //Destructure command and request/task
         const [ command, ...task ] = msg.content.slice(1).split(' ') 
 
         //if command is valid carry out task
@@ -32,29 +33,30 @@ bot.on('message', msg => {
                 //if command === "ping"
                 case "ping":
                     msg.channel.send(ping(task))
-                    break;
+                break;
                     
                 //if command === "play"
                 case "play": 
-                player(task.join(' ') , msg)
-
-                msg.channel.send(`The ${command} command is under construction`)
+                    player(task.join(' ') , msg)
+                    
+                    msg.channel.send(`The ${command} command is under construction`)
                 break;
                 
                 //if command === "stop"
                 case "stop":
                     msg.channel.send(`The ${command} command is under construction`)
-                    break;
+                break;
                     
                 //if command === "pause"
                 case "pause":
+                    // pause(msg)
                     msg.channel.send(`The ${command} command is under construction`)
-                    break;
+                break;
                     
                 //if command === "skip"
                 case "skip":
                     msg.channel.send(`The ${command} command is under construction`)
-                    break;
+                break;
                     
                 //if command === "queue"
                 case "queue":
